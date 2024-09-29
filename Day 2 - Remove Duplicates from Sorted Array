@@ -1,0 +1,12 @@
+size = int(input("Enter the size of the array: "))
+inp = []
+unique = []
+
+for i in range(size):
+    inp.append(int(input(f"Element {i}: ")))
+
+for i in range(len(inp)):
+    if inp[i] not in unique: 
+        unique.append(inp[i])
+
+print(unique)
