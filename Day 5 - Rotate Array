@@ -1,0 +1,14 @@
+def rotate(arr, step, len):
+    new_lst = arr[-step:] + arr[:len - step]
+    return new_lst
+
+inp = []
+size = int(input("Enter the size of the array: "))
+
+for i in range(size):
+    inp.append(int(input(f"Element {i}: ")))
+
+steps = int(input("Enter the steps: "))
+
+ans = rotate(inp, steps, size)
+print(ans)
