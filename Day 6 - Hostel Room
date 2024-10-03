@@ -1,0 +1,12 @@
+T = int(input())          # test cases
+
+while(T):
+    N, X = map(int, input().split())    # N = len of array,  X = initial people
+    arr = input().split(" ")
+
+    for i in range(N):
+        X += int(arr[i])
+
+    print(X)
+
+    T -= 1
