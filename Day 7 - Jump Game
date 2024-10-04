@@ -1,0 +1,24 @@
+def canJump(arr, len):
+    ind = 0
+    result = False
+
+    for i in range(len):
+        try:
+            ind += arr[ind]
+        except IndexError:
+            result =  False
+            break
+        if ind == len - 1:
+            result =  True
+            break
+        
+    return result
+
+lst = []
+size = int(input("Enter the size of the array: "))
+
+for i in range(size):
+    lst.append(int(input(f"Element {i}: ")))
+
+ans = canJump(lst, size)
+print(ans)
