@@ -1,0 +1,16 @@
+def find(String, find):
+    index = -1
+    size = len(find)
+
+    for i in range(len(String) - size + 1):
+        if (String[i:i+size] == find):
+            index = i
+            break
+    
+    return index
+
+haysack = input("Enter the string: ")
+needle = input("Enter the string you want to search: ")
+
+ans = find(haysack, needle)
+print(ans)
