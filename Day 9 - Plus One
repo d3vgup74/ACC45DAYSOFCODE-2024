@@ -1,0 +1,15 @@
+def plusOne(arr, len):
+    number = int("".join(arr))
+    number += 1
+    number = str(number)
+
+    for x in number:
+        arr.append(x)
+    
+    for i in range(len):
+        arr.pop(0)
+
+digits = input("Enter the digits of the number (space separated): ").split(" ")
+
+plusOne(digits, len(digits))
+print(digits)
