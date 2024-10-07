@@ -1,0 +1,10 @@
+T = int(input())
+
+while T:
+    N, A = map(int, input().split())
+    if N - A > A:
+        print(A)
+    else:
+        print(N-A)
+    
+    T -= 1
