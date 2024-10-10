@@ -1,0 +1,14 @@
+T = int(input())
+
+while T:
+    N = int(input())
+    A = input().split(' ')
+    
+    count = 0
+    for ele in A:
+        if A.count(ele) > count:
+            count = A.count(ele)
+
+    print(N - count)
+    
+    T -= 1
