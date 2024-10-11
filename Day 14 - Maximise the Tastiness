@@ -1,0 +1,8 @@
+T = int(input())
+
+while T:
+    a, b, c, d = map(int, input().split())
+    ans = (a if a > b else b) + (c if c > d else d)
+    print(ans)
+    
+    T -= 1
