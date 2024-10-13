@@ -1,0 +1,7 @@
+T = int(input())
+
+while T:
+    N = int(input())
+    print(N * 10)
+
+    T -= 1
