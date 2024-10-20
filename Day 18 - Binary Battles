@@ -1,0 +1,13 @@
+import math
+
+T = int(input())
+
+while T:
+    N, A, B = map(int, input().split())
+    rounds = math.log(N, 2)
+    
+    time = (rounds*A) + ((rounds-1)*B)
+    
+    print(int(time))
+    
+    T -= 1
