@@ -1,0 +1,11 @@
+T = int(input())
+
+while T:
+    N, X, Y = map(int, input().split())
+    
+    if Y % X == 0 and N * X >= Y:
+        print("YES")
+    else:
+        print("NO")
+    
+    T -= 1
