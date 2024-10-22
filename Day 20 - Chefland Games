@@ -1,0 +1,16 @@
+T = int(input())
+
+while T:
+    R = input().split(" ")
+    ball_in = True
+    
+    for i in range(len(R)):
+        if R[i] == "1":
+            ball_in = False
+            
+    if ball_in:
+        print("IN")
+    else:
+        print("OUT")
+    
+    T -= 1
