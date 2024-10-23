@@ -1,0 +1,13 @@
+T = int(input())
+
+while T:
+    X, Y = map(int, input().split())
+    
+    if X % 2 == 1:
+        matches = (X // 2) + 1
+    else:
+        matches = X / 2
+
+    print(int(matches)) 
+    
+    T -= 1
