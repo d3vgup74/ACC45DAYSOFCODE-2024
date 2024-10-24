@@ -1,0 +1,16 @@
+T = int(input())
+
+while T:
+    N = int(input())
+    S = input()
+    ans = -1
+    
+    for i in range(N):
+        for j in range(N):
+            if S[i] == S[j] and i != j:
+                ans = N - 2
+                break
+    
+    print(ans)
+    
+    T -= 1
