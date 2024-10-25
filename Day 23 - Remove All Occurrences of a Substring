@@ -1,0 +1,16 @@
+s  = input()
+part = input()
+
+part_len = len(part)
+
+for i in range(len(s) // 2):
+    if part in s:
+        ind = s.index(part)
+        s_list = list(s)
+        
+        for i in range(part_len):
+            s_list.pop(ind)
+            
+        s = "".join(s_list)    
+        
+print(s)
