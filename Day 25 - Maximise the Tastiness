@@ -1,0 +1,14 @@
+T = int(input())
+
+while T:
+    a, b, c, d = map(int, input().split())
+    
+    if a > b: sum = a
+    else: sum = b
+    
+    if c > d: sum += c
+    else: sum += d
+    
+    print(sum)
+    
+    T -= 1
