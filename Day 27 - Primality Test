@@ -1,0 +1,17 @@
+T = int(input())
+
+while T:
+    N = int(input())
+    prime = True
+    
+    for i in range(2, N//2):
+        if N % 2 == 0:
+            prime = False
+            break
+    
+    if prime:
+        print("yes")
+    else:
+        print("no")
+    
+    T -= 1
