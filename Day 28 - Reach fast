@@ -1,0 +1,13 @@
+import math
+
+T = int(input())
+
+while T:
+    A, B, K = map(int, input().split())
+    
+    distance = abs(B - A)
+    steps = math.ceil(distance / K)
+    
+    print(steps)
+    
+    T -= 1
