@@ -1,0 +1,17 @@
+T = int(input())
+
+while T:
+    P, Q = map(int, input().split())
+    total = P + Q
+    odd = False
+    
+    if total % 2 != 0:
+        total += 1
+        odd = True
+        
+    if (total / 2) % 2 == 0 and not odd:
+        print("Alice")
+    else:
+        print("Bob")
+        
+    T -= 1
