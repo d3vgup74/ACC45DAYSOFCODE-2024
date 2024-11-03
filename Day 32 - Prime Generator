@@ -1,0 +1,18 @@
+T = int(input())
+
+while T:
+    m, n = map(int, input().split())
+
+    for num in range(m, n + 1):
+        prime = True
+
+        for i in range(2, (num // 2) + 1):
+            if num % i == 0:
+                prime = False
+                break
+
+        if prime:
+            print(num)
+    
+    print()
+    T -= 1
