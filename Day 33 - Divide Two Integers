@@ -1,0 +1,9 @@
+class Solution():
+    def divide(self, divident, divisor):
+         qoutient = 0
+         
+         while divident >= divisor:
+             divident = divident - divisor
+             quotient += 1
+
+         return quotient 
