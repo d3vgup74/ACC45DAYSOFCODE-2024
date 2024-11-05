@@ -1,0 +1,13 @@
+T = int(input())
+
+while T:
+    A, B = map(int, input().split())
+    
+    sum = A + B
+    
+    if sum > 10:
+        print(21 - sum)
+    else:
+        print(-1)
+        
+    T -= 1
