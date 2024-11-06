@@ -1,0 +1,13 @@
+T = int(input())
+
+while T:
+    X, A, B = map(int, input().split())
+
+    points = A + (B * 2)
+
+    if points >= X:
+        print('Qualify')
+    else:
+        print('NotQualify')
+    
+    T -= 1
