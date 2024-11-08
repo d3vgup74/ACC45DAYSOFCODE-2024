@@ -1,0 +1,16 @@
+T = int(input())
+
+for _ in range(T):
+    N = int(input())
+    arr = input().split(" ")
+    
+    if N % 2 == 1:
+        print(-1)
+    else:
+        pos = arr.count("1")
+        neg = arr.count("-1")
+        
+        if pos > neg:
+            print(neg)
+        else: 
+            print(pos)
