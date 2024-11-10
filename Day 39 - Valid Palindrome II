@@ -1,0 +1,17 @@
+class Solution(object):
+    def validPalindrome(self, s):
+        def check(Str):
+            for i in range(len(Str) // 2):
+                if Str[i] != Str[len(Str) - i - 1]:
+                    return False, i, len(Str) - i - 1
+            return True, None, None
+
+        is_palindrome, left, right = check(s)
+
+        if is_palindrome:
+            return True
+
+        skip_left = s[:left] + s[left + 1:]
+        skip_right = s[:right] + s[right + 1:]
+
+        return check(skip_left)[0] or check(skip_right)[0]
