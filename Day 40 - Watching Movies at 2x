@@ -1,0 +1,4 @@
+X, Y = map(int, input().split())
+
+runtime = (Y / 2) + (X - Y)
+print(int(runtime))
