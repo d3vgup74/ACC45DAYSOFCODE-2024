@@ -1,0 +1,42 @@
+class LRUCache(object):
+
+    def __init__(self, capacity):
+        self.data_key = []
+        self.data_value = []
+
+        self.priority = []; self.prior = 0
+        
+        self.capacity = capacity
+        self.size = 0
+
+    def get(self, key):
+        if key in self.data_key:
+            self.prior += 1
+            ind = self.data_key.index(key)
+
+            self.priority[ind] = self.prior
+            return self.data_value[ind]
+        
+        else:
+            return -1    
+
+    def put(self, key, value):
+        self.prior += 1
+
+        if key in self.data_key:                     # if in key
+            ind = self.data_key.index(key)
+            self.data_value[ind] = value
+            self.priority[ind] = self.prior
+
+        else:                                  # if not in key
+            if self.size < self.capacity:             # if has space
+                self.data_key.append(key)
+                self.data_value.append(value)
+                self.priority.append(self.prior)
+                self.size += 1
+
+            else:                                        # if capacity full
+                ind = self.priority.index(min(self.priority))
+                self.data_key[ind] = key
+                self.data_value[ind] = value
+                self.priority[ind] = self.prior
