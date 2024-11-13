@@ -1,0 +1,11 @@
+T = int(input())
+
+while T:
+    items = input().split(" ")
+    
+    ind = items.index(min(items))
+    items.pop(ind)
+    
+    print(int(items[0]) + int(items[1]))
+    
+    T -= 1
