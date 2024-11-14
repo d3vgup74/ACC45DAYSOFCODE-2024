@@ -1,0 +1,19 @@
+class Solution(object):
+    def decodeMessage(self, key, message):
+        codes = []
+        decoded = ''
+
+        for i in range(len(key)):
+            if key[i] == " ": continue
+            else:
+                if key[i] not in codes:
+                    codes.append(key[i])
+            
+        for i in range(len(message)):
+            if message[i] == " ":
+                decoded += " "
+            else:
+                ind = codes.index(message[i])
+                decoded += chr(97 + ind)
+
+        return decoded
