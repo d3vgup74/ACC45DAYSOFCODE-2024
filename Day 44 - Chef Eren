@@ -1,0 +1,12 @@
+T = int(input())
+
+for _ in range(T):
+    N, A, B = map(int, input().split())
+    
+    if N % 2 == 0:
+        ans = (N / 2)*(A + B)
+    else:
+        ans = (N // 2)*(A + B) + B
+        
+    
+    print(int(ans))
